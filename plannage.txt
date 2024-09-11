@@ -1,0 +1,70 @@
+The "Contact" Node:
+FOLLOWS SINGLY LINKED LIST ARCHITECTURE AND OPERATIONS
+index (int) = automatically added
+name (string) = user input (compulsory)
+phoneNo (long long) = user input (compulsory)
+email (string) = user input (optional), enter " " to signify empty username
+next (pointer) = address of next node
+(volatile: reads data from the .txt file and creates the LL everytime the prog is run)
+(the .txt file for different contacts is different for users and its name is "username+suffix.txt")
+
+Create a phoneBook class which will contain the contactNode related functions
+
+Hashtables for:
+name : index
+index : LLNode address
+(for faster searches ~O(1), also volatile, created from the LL)
+
+
+Users and their passwords
+username : key (generated somehow using a hashing function)
+key : password
+(volatile: stored in sets of 2 .txt files)
+
+diff users which have access to a certain user
+file name: "username+AccessList".txt which will contain all usernames which will have access to contact list of that username / access condition (public/private etc) 
+(1 .txt file for each user)
+
+
+.txt required:
+username key, key password (saved in a credentials directory)
+contact list for each user (saved in data directory)
+access list for each user (saved in a accessData directory, obviouly different for each user)
+
+
+suffix tries for an autocomplete search type feature
+for name, email: string (decide the children node stuff, like for email it will be 27, all small + @)
+email: force lowercase everything as emails are not case sensitive
+for phoneNo: char (each no has 10 children, 0-9)
+(volatile: reads data from created LL and creates all 3 tries)
+
+
+features:
+
+1: user handling
+exit / start basic functionality
+different accounts with their username + pass (a change username / pass functionality add afterwords- for this, keep the key same; which is generated for the first username? ; a list all accounts functionality from which a user can be selected and then enter password; delete user)
+users can log out / exit any time and will be given a prompt to save changes made (if Y, then rewrite the new contact LL to the txt)
+
+2: data handling
+add / remove contact nodes to LL
+search for a particular contact based on any property
+select a particular contact node, which can be edited, deleted etc
+print all contacts / sort them in any order, delete all conacts
+add a "share/friends" type feature, where if a user gives permission to another user, then the other user can view their contacts. this permission can be revoked as well, or can be givern toevery other account (public, private, friends mode)
+other users contact list can be open in read only mode, and either all contacts can be copied or select specific contacts to copy. In case matching name / phoneNo / email, ask if u want to keep both, only the old one or the new one
+
+for contact sharing there will be 2 .txts, one txt will contain different users a user has access to (this makes it easier for delete operation), the other will contain different users which can access a user's contacts (this makes it possible to read)
+
+
+data structures + concepts required:
+OOPS
+LL
+hashmap (using hashtable)
+tries
+
+libraries: 
+iostream: basic i/p and o/p
+fstream: .txt file i/p and o/p
+sys/stat.h: mkdir() to create a folder
+conio.h: clrscr() to clear all data from the console

@@ -1,0 +1,95 @@
+--Welcome Page
+
+functions:
+Can actually start the program
+Cam actually end the program
+Will create neccessary directories for the program and console cleaning etc
+
+.txt loaded:
+none
+
+data structures used:
+none
+
+
+
+--User Login Page
+
+funtions:
+Most of the user handling related stuff:
+view different users (from which, 1 can be selected), create a new user, delete an existing user - have to enter details and login in first (along with all their existing data), rename users?, general login
+
+.txt loaded:
+userHash and hashPass
+
+data structures used:
+hashtables for user hash and hash pass
+
+
+
+--User delete page
+
+functions:
+deletes all the contact data, username / password data of a user from the dirctory, along with their name from the allowed acces list of other users
+
+.txt loaded:
+file which contains all otherusers which can be accessed by this one
+
+data structures used:
+something (hashtable / array) to contain names of all other users
+
+
+
+--User Contact Page 
+
+functions:
+all of the data handling stuff + importing stuff from other users
+
+.txt loaded:
+contact list .txt
+
+data structures used:
+linked list
+hashtables
+tries
+
+
+
+--User access provide page
+
+functions:
+a user gives / revokes sets to public / private their data access
+
+.txt loaded:
+prev stuff from user contact page 
+userHash
+
+data structures used:
+previous stuff
+set for storing usernames
+
+
+
+--contact import page
+
+functions: if allowed access, allows user to import all / a section of another users contacts into their own
+
+.txt loaded:
+contact list of chosen user
+
+data structures:
+//still figuring this out
+
+
+
+--commit changes page
+functions:
+keeps track of all the changes made to original contact LL and if the changes are to commited, then that LL will ovverwrte the data in contact file if user enters yes
+
+.txt and data structures used:
+everything from the user contact page is loaded, just in case user wants to go back to the contact list
+
+
+
+--finish screen
+BYEBYE
